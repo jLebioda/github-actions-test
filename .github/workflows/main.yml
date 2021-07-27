@@ -22,3 +22,6 @@ jobs:
 
     - name: Print envvars
       run: env
+
+    - name: Fail tests
+      run: exit 1
