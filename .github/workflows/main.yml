@@ -1,0 +1,24 @@
+name: Execute the tests
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  tests:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Run some commands
+      run: echo "Hello world!"
+
+    - name: Print envvars
+      run: env
